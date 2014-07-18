@@ -1,0 +1,55 @@
+#!/bin/sh
+
+cd /home/joe/projects/output
+
+python -c "from grid_remap.analysis.two_rooms import SmoothRemap; r = SmoothRemap(desc='shift'); r(nsteps=32, nmodules=2, shift=True); r.save_data()"
+python -c "from grid_remap.analysis.two_rooms import SmoothRemap; r = SmoothRemap(desc='ellipticity'); r(nsteps=32, nmodules=2, ellipticity=True); r.save_data()"
+python -c "from grid_remap.analysis.two_rooms import SmoothRemap; r = SmoothRemap(desc='rescaling'); r(nsteps=32, nmodules=2, rescaling=True); r.save_data()"
+python -c "from grid_remap.analysis.two_rooms import SmoothRemap; r = SmoothRemap(desc='shift freq'); r(nsteps=32, nmodules=2, shift=True, freq_modules=True); r.save_data()"
+python -c "from grid_remap.analysis.two_rooms import SmoothRemap; r = SmoothRemap(desc='ellipticity freq'); r(nsteps=32, nmodules=2, ellipticity=True, freq_modules=True); r.save_data()"
+python -c "from grid_remap.analysis.two_rooms import SmoothRemap; r = SmoothRemap(desc='rescaling freq'); r(nsteps=32, nmodules=2, rescaling=True, freq_modules=True); r.save_data()"
+
+python -c "from grid_remap.analysis.two_rooms import SampleRemap; r = SampleRemap(desc='shift 1'); r(nsamples=64, nmodules=1, shift=True); r.save_data()"
+python -c "from grid_remap.analysis.two_rooms import SampleRemap; r = SampleRemap(desc='shift 2'); r(nsamples=64, nmodules=2, shift=True); r.save_data()"
+python -c "from grid_remap.analysis.two_rooms import SampleRemap; r = SampleRemap(desc='shift 4'); r(nsamples=64, nmodules=4, shift=True); r.save_data()"
+python -c "from grid_remap.analysis.two_rooms import SampleRemap; r = SampleRemap(desc='shift 8'); r(nsamples=64, nmodules=8, shift=True); r.save_data()"
+python -c "from grid_remap.analysis.two_rooms import SampleRemap; r = SampleRemap(desc='shift 16'); r(nsamples=64, nmodules=16, shift=True); r.save_data()"
+python -c "from grid_remap.analysis.two_rooms import SampleRemap; r = SampleRemap(desc='shift 1 freq'); r(nsamples=64, freq_modules=True, nmodules=1, shift=True); r.save_data()"
+python -c "from grid_remap.analysis.two_rooms import SampleRemap; r = SampleRemap(desc='shift 2 freq'); r(nsamples=64, freq_modules=True, nmodules=2, shift=True); r.save_data()"
+python -c "from grid_remap.analysis.two_rooms import SampleRemap; r = SampleRemap(desc='shift 4 freq'); r(nsamples=64, freq_modules=True, nmodules=4, shift=True); r.save_data()"
+python -c "from grid_remap.analysis.two_rooms import SampleRemap; r = SampleRemap(desc='shift 8 freq'); r(nsamples=64, freq_modules=True, nmodules=8, shift=True); r.save_data()"
+python -c "from grid_remap.analysis.two_rooms import SampleRemap; r = SampleRemap(desc='shift 16 freq'); r(nsamples=64, freq_modules=True, nmodules=16, shift=True); r.save_data()"
+
+python -c "from grid_remap.analysis.two_rooms import SampleRemap; r = SampleRemap(desc='ellipticity 1'); r(nsamples=64, nmodules=1, ellipticity=True); r.save_data()"
+python -c "from grid_remap.analysis.two_rooms import SampleRemap; r = SampleRemap(desc='ellipticity 2'); r(nsamples=64, nmodules=2, ellipticity=True); r.save_data()"
+python -c "from grid_remap.analysis.two_rooms import SampleRemap; r = SampleRemap(desc='ellipticity 4'); r(nsamples=64, nmodules=4, ellipticity=True); r.save_data()"
+python -c "from grid_remap.analysis.two_rooms import SampleRemap; r = SampleRemap(desc='ellipticity 8'); r(nsamples=64, nmodules=8, ellipticity=True); r.save_data()"
+python -c "from grid_remap.analysis.two_rooms import SampleRemap; r = SampleRemap(desc='ellipticity 16'); r(nsamples=64, nmodules=16, ellipticity=True); r.save_data()"
+python -c "from grid_remap.analysis.two_rooms import SampleRemap; r = SampleRemap(desc='ellipticity 1 freq'); r(nsamples=64, freq_modules=True, nmodules=1, ellipticity=True); r.save_data()"
+python -c "from grid_remap.analysis.two_rooms import SampleRemap; r = SampleRemap(desc='ellipticity 2 freq'); r(nsamples=64, freq_modules=True, nmodules=2, ellipticity=True); r.save_data()"
+python -c "from grid_remap.analysis.two_rooms import SampleRemap; r = SampleRemap(desc='ellipticity 4 freq'); r(nsamples=64, freq_modules=True, nmodules=4, ellipticity=True); r.save_data()"
+python -c "from grid_remap.analysis.two_rooms import SampleRemap; r = SampleRemap(desc='ellipticity 8 freq'); r(nsamples=64, freq_modules=True, nmodules=8, ellipticity=True); r.save_data()"
+python -c "from grid_remap.analysis.two_rooms import SampleRemap; r = SampleRemap(desc='ellipticity 16 freq'); r(nsamples=64, freq_modules=True, nmodules=16, ellipticity=True); r.save_data()"
+
+python -c "from grid_remap.analysis.two_rooms import SampleRemap; r = SampleRemap(desc='rescaling 1'); r(nsamples=64, nmodules=1, rescaling=True); r.save_data()"
+python -c "from grid_remap.analysis.two_rooms import SampleRemap; r = SampleRemap(desc='rescaling 2'); r(nsamples=64, nmodules=2, rescaling=True); r.save_data()"
+python -c "from grid_remap.analysis.two_rooms import SampleRemap; r = SampleRemap(desc='rescaling 4'); r(nsamples=64, nmodules=4, rescaling=True); r.save_data()"
+python -c "from grid_remap.analysis.two_rooms import SampleRemap; r = SampleRemap(desc='rescaling 8'); r(nsamples=64, nmodules=8, rescaling=True); r.save_data()"
+python -c "from grid_remap.analysis.two_rooms import SampleRemap; r = SampleRemap(desc='rescaling 16'); r(nsamples=64, nmodules=16, rescaling=True); r.save_data()"
+python -c "from grid_remap.analysis.two_rooms import SampleRemap; r = SampleRemap(desc='rescaling 1 freq'); r(nsamples=64, freq_modules=True, nmodules=1, rescaling=True); r.save_data()"
+python -c "from grid_remap.analysis.two_rooms import SampleRemap; r = SampleRemap(desc='rescaling 2 freq'); r(nsamples=64, freq_modules=True, nmodules=2, rescaling=True); r.save_data()"
+python -c "from grid_remap.analysis.two_rooms import SampleRemap; r = SampleRemap(desc='rescaling 4 freq'); r(nsamples=64, freq_modules=True, nmodules=4, rescaling=True); r.save_data()"
+python -c "from grid_remap.analysis.two_rooms import SampleRemap; r = SampleRemap(desc='rescaling 8 freq'); r(nsamples=64, freq_modules=True, nmodules=8, rescaling=True); r.save_data()"
+python -c "from grid_remap.analysis.two_rooms import SampleRemap; r = SampleRemap(desc='rescaling 16 freq'); r(nsamples=64, freq_modules=True, nmodules=16, rescaling=True); r.save_data()"
+
+python -c "from grid_remap.analysis.two_rooms import SampleRemap; r = SampleRemap(desc='random'); r(nsamples=64, do_random=True); r.save_data()"
+python -c "from grid_remap.analysis.two_rooms import SampleRemap; r = SampleRemap(desc='shift rnd'); r(nsamples=64, nmodules=1000, freq_modules=True, shift=True); r.save_data()"
+python -c "from grid_remap.analysis.two_rooms import SampleRemap; r = SampleRemap(desc='ellipticity rnd'); r(nsamples=64, nmodules=1000, ellipticity=True); r.save_data()"
+python -c "from grid_remap.analysis.two_rooms import SampleRemap; r = SampleRemap(desc='rescaling rnd'); r(nsamples=64, nmodules=1000, rescaling=True); r.save_data()"
+
+python -c "from grid_remap.analysis.realign import RealignmentSweep; r = RealignmentSweep(desc='shift rotate'); r(x_type='shift', y_type='rotate', x_density=16, y_density=16, nmodules=2); r.save_data()"
+python -c "from grid_remap.analysis.realign import RealignmentSweep; r = RealignmentSweep(desc='zoom ellipticity'); r(x_type='zoom', y_type='ellipticity', x_density=16, y_density=16, nmodules=2); r.save_data()"
+
+python -c "from grid_remap.analysis.realign import RealignmentSweep; r = RealignmentSweep(desc='shift modules'); r(x_type='shift', y_type='modules', x_density=16, nmodules=16); r.save_data()"
+python -c "from grid_remap.analysis.realign import RealignmentSweep; r = RealignmentSweep(desc='ellipticity modules'); r(x_type='ellipticity', y_type='modules', x_density=16, nmodules=16); r.save_data()"
+python -c "from grid_remap.analysis.realign import RealignmentSweep; r = RealignmentSweep(desc='zoom modules'); r(x_type='zoom', y_type='modules', x_density=16, nmodules=16); r.save_data()"
